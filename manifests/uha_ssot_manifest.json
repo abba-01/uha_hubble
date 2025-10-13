@@ -1,0 +1,32 @@
+{
+  "project": "UHA–Hubble Tension SSOT",
+  "version": "1.0",
+  "bit_depth": 16,
+  "integration_method": "trapezoid_10000",
+  "priors": ["Planck2018", "SH0ES2022"],
+  "data_inputs": [
+    "data_raw/planck.csv",
+    "data_raw/sh0es.csv",
+    "data_raw/trgb.csv",
+    "data_raw/tdcosmo.csv"
+  ],
+  "outputs": [
+    "data_encoded/uha_records.json",
+    "analysis/tension_geometry.csv",
+    "analysis/systematic_targets.json"
+  ],
+  "checksums": {},
+  "last_validated": null,
+  "authors": ["Eric <principal investigator>"],
+  "notes": "Single-source-of-truth implementation for cosmology-portable tension analysis.",
+  "integrity_framework": {
+    "protocol": "SAID",
+    "version": "1.0",
+    "guardrails": [
+      "SAID/edm.guardrails_live.json",
+      "SAID/guardrails_v1_2025.json"
+    ],
+    "disclosure": "SAID/Scientific_Academic_Integrity_Disclosure.md",
+    "sync_source": "abba-01/abba/SAID"
+  }
+}

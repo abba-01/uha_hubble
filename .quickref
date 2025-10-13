@@ -1,0 +1,123 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                   UHA-HUBBLE TENSION SSOT - QUICK REFERENCE                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📍 LOCATION
+  /run/media/root/OP01/got/uha_hubble/
+
+🎯 PURPOSE
+  Cosmology-portable Hubble tension analysis using Universal Horizon Address
+
+📊 STATUS
+  ✅ Directory structure initialized
+  ✅ SAID protocols integrated
+  ⏳ Source code to be implemented
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ ESSENTIAL FILES                                                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+📖 SETUP_COMPLETE.md          Complete setup summary & next steps
+📖 README.md                   Full project documentation
+📋 manifests/uha_ssot_manifest.json   Project configuration
+📝 manifests/changelog.md      Version history & roadmap
+🔒 SAID/                       Scientific integrity protocols
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ QUICK COMMANDS                                                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+# View structure
+tree -L 2
+
+# Check manifest
+cat manifests/uha_ssot_manifest.json | jq .
+
+# Check SAID integration
+cat manifests/uha_ssot_manifest.json | jq .integrity_framework
+
+# View setup summary
+cat SETUP_COMPLETE.md
+
+# Install dependencies (when ready)
+pip install -r requirements.txt
+
+# Run pipeline (when implemented)
+./scripts/run_all.sh
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ DIRECTORY LAYOUT                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+data_raw/        → Immutable source data (Planck, SH0ES, TRGB, TDCOSMO)
+data_encoded/    → UHA binary/JSON outputs
+analysis/        → Results, tension geometry, systematic targets
+src/             → Source code (constants, cosmology, encode, decode, etc.)
+notebooks/       → Jupyter analysis notebooks
+tests/           → Unit and regression tests
+SAID/            → Scientific integrity protocols ⭐
+scripts/         → Automation (run_all.sh, verify_crc, checksums)
+manifests/       → Metadata, checksums, changelog
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ SUCCESS CRITERIA                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+□ All probes encoded → uha_records.json
+□ |Δξ| < 1×10⁻⁸ (cross-cosmology invariance)
+□ 503 ± 50 kpc systematic localization
+□ 7.64% horizon-scale tension feature visible
+□ Checksum verification passes
+☑ SAID protocols integrated
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ NEXT MILESTONES                                                               ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+v1.1.0  → Implement src/constants.py, cosmology.py, morton.py, encode_uha.py
+v1.2.0  → Add decode, tension_geometry, invariance_test
+v1.3.0  → Complete visualization, systematic_localization, notebooks
+v2.0.0  → Full validation with real data
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ SAID PROTOCOLS                                                                ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Framework: Scientific Academic Integrity Disclosure
+Master:    abba-01/abba/SAID (auto-synced)
+
+Guardrails:
+  • SAID/edm.guardrails_live.json        (active, 23KB)
+  • SAID/guardrails_v1_2025.json         (version-specific)
+  • SAID/guardrails_copilot_wsu_v1.json  (GitHub Copilot)
+
+Key Features:
+  ✓ Prevents AI fabrication
+  ✓ Enforces verifiable sources
+  ✓ Requires reproducible outputs
+  ✓ Maintains provenance chain
+
+Manual Sync (if needed):
+  cd /run/media/root/OP01/got/abba
+  ./SAID/sync_said_to_all_repos.sh
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ GOVERNANCE RULES                                                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+1. Raw data: NEVER edited after ingestion
+2. All code: Version-controlled with hash validation
+3. Every result: Traceable to manifest and checksum
+4. Rebuilds: MUST regenerate CRCs and SHA-256 before archiving
+5. SAID compliance: All AI-assisted work follows SAID protocols
+
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ CONTACT                                                                       ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+Principal Investigator: Eric
+Institution: Washington State University, Vancouver
+
+═══════════════════════════════════════════════════════════════════════════════
+Created: October 13, 2025 | Version: 1.0 | Status: Setup Complete ✅
+═══════════════════════════════════════════════════════════════════════════════
